@@ -67,6 +67,9 @@ params:
   # This requires your images to be uploaded + hosted on Cloudinary
   # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
   # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
+  
+  # Whether to add mathjax support on all pages. Alternatively, you can opt-in per page by adding `mathjax: true` in the frontmatter.
+  mathjax: false
 
   # Whether the fade animations on the home page will be enabled
   animate: true
@@ -106,6 +109,9 @@ params:
     brandName: "Hugo Profile" # Brand name for the brand | default is the title variable
     disableSearch: false
     # searchPlaceholder: "Search"
+    stickyNavBar:
+      enable : true
+      showOnScrollUp : true
     menus:
       disableAbout: false
       disableExperience: false
@@ -135,7 +141,7 @@ params:
       fontAwesomeIcons:
         - icon: fab fa-github
           url: https://example.com
-        - icon: fab fa-twitter
+        - icon: fab fa-x-twitter
           url: https://example.com
       customIcons:
         - icon: /fav.png
@@ -346,8 +352,8 @@ params:
     enable: true
     # title: "Custom Name"
     content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
-    email: gurusabarisha@gmail.com
     btnName: Mail me
+    btnLink: mailto:gurusabarisha@gmail.com
     # formspree:
     #   enable: true # `contact.email` value will be ignored
     #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
